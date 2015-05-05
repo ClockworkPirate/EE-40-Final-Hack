@@ -1,4 +1,11 @@
 import os, cherrypy
+# from galileo import *
+
+# l = 4
+# r = 2
+#
+# pinMode(l, OUTPUT)
+# pinMode(r, OUTPUT)
 
 class RobotControl(object):
 	@cherrypy.expose
@@ -10,12 +17,13 @@ class RobotControlAPI(object):
 
 	@cherrypy.tools.accept(media='text/plain')
 	def POST(self, direction):
-		# move the robot
-		pass
+		print "POST"
+		# digitalWrite(l, HIGH)
+		# delay(1000)
+		# digitalWrite(l, LOW)
 
 	def PUT(self, direction):
-		#feedback test
-		pass
+		print "PUT"
 
 if __name__ == '__main__':
 	conf = {
